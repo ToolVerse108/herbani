@@ -157,7 +157,21 @@ export default function HerbaniWebsite() {
               <a href="#contact" className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-full font-bold hover:shadow-xl transition flex items-center justify-center group text-lg">
                 Start Free Now
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition" />
-              </a>
+              <a
+  href="#contact"
+  onClick={(e) => {
+    e.preventDefault();
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }}
+  className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-full font-bold hover:shadow-xl transition flex items-center justify-center group text-lg"
+>
+  Start Free Now
+  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition" />
+</a>
+
               <a href="#how-it-works" className="border-2 border-emerald-500 text-emerald-600 px-8 py-4 rounded-full font-bold hover:bg-emerald-50 transition text-center text-lg">
                 See How It Works
               </a>
